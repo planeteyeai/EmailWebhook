@@ -60,7 +60,7 @@ app.post("/alert", async (req, res) => {
     }
 
     const alert = alerts[0];
-    const recipients = ["Aniket.Shinde@planeteyefarm.ai"];
+    const recipients = ["mahaleumesh360@gmail.com"];
 
     await sendAlertEmail(alert, recipients);
 
@@ -83,7 +83,7 @@ app.post("/alert/critical", async (req, res) => {
 
     const alert = alerts[0];
     const recipients = [
-      "Aniket.Shinde@planeteyefarm.ai",
+      "mahaleumesh360@gmail.com",
       "tushar.patil@mitconindia.com",
       "ram.thakur@planeteyeinfra.ai",
       "sahil.sonawane@planeteyefarm.ai",
