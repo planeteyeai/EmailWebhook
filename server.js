@@ -35,7 +35,7 @@ Description: ${alert.annotations.description || "No description"}
 
   await sgMail.send({
     to: recipients,
-    from: "planeteyefarm@gmail.com",
+    from: "noreply@sendgrid.net",
     subject: subject,
     text: message,
   });
@@ -60,7 +60,7 @@ app.post("/alert", async (req, res) => {
     }
 
     const alert = alerts[0];
-    const recipients = ["mahaleumesh360@gmail.com"];
+    const recipients = ["Aniket.Shinde@planeteyefarm.ai"];
 
     await sendAlertEmail(alert, recipients);
 
@@ -83,7 +83,7 @@ app.post("/alert/critical", async (req, res) => {
 
     const alert = alerts[0];
     const recipients = [
-      "mahaleumesh360@gmail.com",
+      "Aniket.Shinde@planeteyefarm.ai",
       "tushar.patil@mitconindia.com",
       "ram.thakur@planeteyeinfra.ai",
       "sahil.sonawane@planeteyefarm.ai",
