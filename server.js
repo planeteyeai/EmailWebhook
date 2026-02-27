@@ -9,6 +9,15 @@ sgMail.setApiKey(process.env.SENDGRID_KEY);
 // Middleware
 app.use(express.json());
 
+// Health check endpoint
+app.get("/", (req, res) => {
+  res.send("✅ Alert Mailer is running!");
+});
+
+app.get("/health", (req, res) => {
+  res.json({ status: "ok", service: "alert-mailer" });
+});
+
 // Endpoint for Alertmanager
 app.post("/alert", async (req, res) => {
   try {
