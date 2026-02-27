@@ -35,7 +35,7 @@ Description: ${alert.annotations.description || "No description"}
 
   await sgMail.send({
     to: recipients,
-    from: "noreply@sendgrid.net",
+    from: "planeteyefarm@gmail.com",
     subject: subject,
     text: message,
   });
